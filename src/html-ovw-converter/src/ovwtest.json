@@ -1,0 +1,30 @@
+{
+    "Key" : "GoogleBigQuery.Table.dev-data-teams-governance-1.data_governance_sample.dimdate_copy",
+    "Name" : "dev-data-teams-governance-1:data_governance_sample.dimdate_copy",
+    "Label" : "dimdate_copy",
+    "SourceDescription" : null,
+    "NativeType" : "GoogleBigQueryTable",
+    "Source" : {
+        "ServerName" : "bigquery.googleapis.com",
+        "SystemName" : "GoogleBigQuery"
+    },
+    "Hash" : "a71533a5f211c8a010af4f6a6b57a76fddd7d388177e7a191d97778f9140a219",
+    "ContainsPII" : false,
+    "IsPII" : false,
+    "PIILevel" : 0,
+    "Command" : "https://bigquery.googleapis.com/bigquery/v2/projects/dev-data-teams-governance-1/datasets/data_governance_sample/tables/dimdate_copy?maxResults=10000",
+    "DGCDescription" : null,
+    "TargetNames" : [],
+    "ParentHierarchy" : [ 
+        {
+            "_t" : "MetamodelReference",
+            "Key" : "GoogleBigQuery.Dataset.dev-data-teams-governance-1.data_governance_sample",
+            "Type" : "GoogleBigQueryDataset"
+        }, 
+        {
+            "_t" : "MetamodelReference",
+            "Key" : "GoogleBigQuery.Project.dev-data-teams-governance-1",
+            "Type" : "GoogleBigQueryProject"
+        }
+    ]
+}

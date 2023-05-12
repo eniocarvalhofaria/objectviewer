@@ -1,0 +1,19 @@
+\#@Label
+\//####Full Name
+@Name
+\//####Native Type
+@NativeType
+-
+##PII
+\\\####Contains PII: 
+@ContainsPII
+\\\####Is PII:
+@IsPII
+\\\####PII Level:
+@PIILevel
+\/Parent Hierarchy
+
+
+\\\\
+\\\\
+\\\\
