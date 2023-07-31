@@ -1,19 +1,15 @@
-\#@Label
-\//####Full Name
+#@Label
+[m12,d6]####Full Name
 @Name
-\//####Native Type
+[m12,d6]####Native Type
 @NativeType
 -
 ##PII
-\\\####Contains PII: 
+[a4]####Contains PII: 
 @ContainsPII
-\\\####Is PII:
+[a4]####Is PII:
 @IsPII
-\\\####PII Level:
+[a4]####PII Level:
 @PIILevel
-\/Parent Hierarchy
+[a12]Parent Hierarchy
 
-
-\\\\
-\\\\
-\\\\

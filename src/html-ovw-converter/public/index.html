@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -25,185 +23,328 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-  </head>
-  <style>
-    :root{
-      --colmargin:5px;
-      --border:1px;
+</head>
+<style>
+    :root {
+        --colmargin: 5px;
+        --border: 1px;
     }
 
-    *, :after, :before {
-    box-sizing:border-box;
-  }
-  .ovw-container>h1,
-  .ovw-container>h2,
-  .ovw-container>h3,
-  .ovw-container>h4,
-  .ovw-container>h5,
-  .ovw-container>p{
-    margin-left: var(--colmargin);
-    float:left;
-    width:100%;
-    margin-bottom: var(--colmargin);
-  } 
-  .bl{
-    width:100%;
-    float:left;
-  margin: 0  var(--colmargin) 0  var(--colmargin);
-  }
-    .ovw-container{
-      box-sizing: border-box;
-      display:block;
+    *,
+    :after,
+    :before {
+        box-sizing: border-box;
     }
+
+    .ovw-container>h1,
+    .ovw-container>h2,
+    .ovw-container>h3,
+    .ovw-container>h4,
+    .ovw-container>h5,
+    .ovw-container>p {
+        margin-left: var(--colmargin);
+        float: left;
+        width: 100%;
+        margin-bottom: var(--colmargin);
+    }
+
+    .bl {
+        width: 100%;
+        float: left;
+        margin: 0 var(--colmargin) 0 var(--colmargin);
+    }
+
+    .ovw-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .ovw-container:before {
-  content: "";
-  clear: both;
-  display: table;
+        content: "";
+        clear: both;
+        display: table;
 
-}
-.ovw-container:after {
-    clear: both;
-}
-     @media only screen and (max-width:calc( 7680px)) {
-      .col-m1,.col-m2,.col-m3,.col-m4,
-      .col-m5,.col-m6,.col-m7,.col-m8,
-      .col-m9,.col-m10,.col-m11,.col-m12
-    {
-      float:left;
-      padding:8px;
-      margin: var(--colmargin); 
-      border-radius: 4px;
-      border:var(--border) solid #dadada; 
-      height:100%;
-      }
-
-    .col-m1{
-      width:calc(100% - (var(--colmargin) *2));
     }
 
-    .col-m2{
-      width:calc(50% - (var(--colmargin) *2));
-     }
-    .col-m3{
-      width:calc(33.33% - (var(--colmargin) *2));
+    .ovw-container:after {
+        clear: both;
     }
-    .col-m4{
-      width:calc(25% - (var(--colmargin) *2));
+    .col-a1,
+    .col-a2,
+    .col-a3,
+    .col-a4,
+    .col-a5,
+    .col-a6,
+    .col-a7,
+    .col-a8,
+    .col-a9,
+    .col-a10,
+    .col-a11,
+    .col-a12 {
+        float: left;
+        padding: 8px;
+        margin: var(--colmargin);
+        border-radius: 4px;
+        border: var(--border) solid #dadada;
+        height: 100%;
     }
-    .col-m5{
-      width:calc(20% - (var(--colmargin) *2));
-    }
-    .col-m6{
-      width:calc(16.66667% - (var(--colmargin) *2));
-    }
-    .col-m7{
-      width:calc(14.2857% - (var(--colmargin) *2));
-    }
-    .col-m8{
-      width:calc(12.5% - (var(--colmargin) *2));
-    }
-    .col-m9{
-      width:calc(11.1111% - (var(--colmargin) *2));
-    }
-    .col-m10{
-      width:calc(10% - (var(--colmargin) *2));
-    }
-    .col-m11{
-      width:calc(9.090909% - (var(--colmargin) *2));
-    }
-    .col-m12{
-      width:calc(8.3333% - (var(--colmargin) *2));
-    }
-      }
-    @media only screen and (min-width:calc( 768px)) {
     
-    .col-d1{
-      width:calc(100% - (var(--colmargin) *2));
+    .row-a > div[class^="col-a"] {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
     }
-    .col-d2{
-      width:calc(50% - (var(--colmargin) *2));
+    .col-a1 {
+    flex-basis: calc(8.333% - (var(--colmargin) * 2));
+    max-width: calc(8.333% - (var(--colmargin) * 2));
+  }
+
+  .col-a2 {
+    flex-basis: calc(16.666% - (var(--colmargin) * 2));
+    max-width: calc(16.666% - (var(--colmargin) * 2));
+  }
+
+  .col-a3 {
+    flex-basis: calc(25% - (var(--colmargin) * 2));
+    max-width: calc(25% - (var(--colmargin) * 2));
+  }
+
+  .col-a4 {
+    flex-basis: calc(33.333% - (var(--colmargin) * 2));
+    max-width: calc(33.333% - (var(--colmargin) * 2));
+  }
+
+  .col-a5 {
+    flex-basis: calc(41.666% - (var(--colmargin) * 2));
+    max-width: calc(41.666% - (var(--colmargin) * 2));
+  }
+
+  .col-a6 {
+    flex-basis: calc(50% - (var(--colmargin) * 2));
+    max-width: calc(50% - (var(--colmargin) * 2));
+  }
+
+  .col-a7 {
+    flex-basis: calc(58.333% - (var(--colmargin) * 2));
+    max-width: calc(58.333% - (var(--colmargin) * 2));
+  }
+
+  .col-a8 {
+    flex-basis: calc(66.666% - (var(--colmargin) * 2));
+    max-width: calc(66.666% - (var(--colmargin) * 2));
+  }
+
+  .col-a9 {
+    flex-basis: calc(75% - (var(--colmargin) * 2));
+    max-width: calc(75% - (var(--colmargin) * 2));
+  }
+
+  .col-a10 {
+    flex-basis: calc(83.333% - (var(--colmargin) * 2));
+    max-width: calc(83.333% - (var(--colmargin) * 2));
+  }
+
+  .col-a11 {
+    flex-basis: calc(91.666% - (var(--colmargin) * 2));
+    max-width: calc(91.666% - (var(--colmargin) * 2));
+  }
+
+  .col-a12 {
+    flex-basis: calc(100% - (var(--colmargin) * 2));
+    max-width: calc(100% - (var(--colmargin) * 2));
+  }
+    .row-a{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    @media only screen and (max-width:calc(768px)) {
+
+        .row-m{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-m1,
+        .col-m2,
+        .col-m3,
+        .col-m4,
+        .col-m5,
+        .col-m6,
+        .col-m7,
+        .col-m8,
+        .col-m9,
+        .col-m10,
+        .col-m11,
+        .col-m12 {
+            float: left;
+            padding: 8px;
+            margin: var(--colmargin);
+            border-radius: 4px;
+            border: var(--border) solid #dadada;
+            height: 100%;
+        }
+
+        .col-m1 {
+    flex-basis: calc(8.333% - (var(--colmargin) * 2));
+    max-width: calc(8.333% - (var(--colmargin) * 2));
+  }
+
+  .col-m2 {
+    flex-basis: calc(16.666% - (var(--colmargin) * 2));
+    max-width: calc(16.666% - (var(--colmargin) * 2));
+  }
+
+  .col-m3 {
+    flex-basis: calc(25% - (var(--colmargin) * 2));
+    max-width: calc(25% - (var(--colmargin) * 2));
+  }
+
+  .col-m4 {
+    flex-basis: calc(33.333% - (var(--colmargin) * 2));
+    max-width: calc(33.333% - (var(--colmargin) * 2));
+  }
+
+  .col-m5 {
+    flex-basis: calc(41.666% - (var(--colmargin) * 2));
+    max-width: calc(41.666% - (var(--colmargin) * 2));
+  }
+
+  .col-m6 {
+    flex-basis: calc(50% - (var(--colmargin) * 2));
+    max-width: calc(50% - (var(--colmargin) * 2));
+  }
+
+  .col-m7 {
+    flex-basis: calc(58.333% - (var(--colmargin) * 2));
+    max-width: calc(58.333% - (var(--colmargin) * 2));
+  }
+
+  .col-m8 {
+    flex-basis: calc(66.666% - (var(--colmargin) * 2));
+    max-width: calc(66.666% - (var(--colmargin) * 2));
+  }
+
+  .col-m9 {
+    flex-basis: calc(75% - (var(--colmargin) * 2));
+    max-width: calc(75% - (var(--colmargin) * 2));
+  }
+
+  .col-m10 {
+    flex-basis: calc(83.333% - (var(--colmargin) * 2));
+    max-width: calc(83.333% - (var(--colmargin) * 2));
+  }
+
+  .col-m11 {
+    flex-basis: calc(91.666% - (var(--colmargin) * 2));
+    max-width: calc(91.666% - (var(--colmargin) * 2));
+  }
+
+  .col-m12 {
+    flex-basis: calc(100% - (var(--colmargin) * 2));
+    max-width: calc(100% - (var(--colmargin) * 2));
+  }
     }
-    .col-d3{
-      width:calc(33.33% - (var(--colmargin) *2));
-    }
-    .col-d4{
-      width:calc(25% - (var(--colmargin) *2));
-    }
-    .col-d5{
-      width:calc(20% - (var(--colmargin) *2));
-    }
-    .col-d6{
-      width:calc(16.66667% - (var(--colmargin) *2));
-    }
-    .col-d7{
-      width:calc(14.2857% - (var(--colmargin) *2));
-    }
-    .col-d8{
-      width:calc(12.5% - (var(--colmargin) *2));
-    }
-    .col-d9{
-      width:calc(11.1111% - (var(--colmargin) *2));
-    }
-    .col-d10{
-      width:calc(10% - (var(--colmargin) *2));
-    }
-    .col-d11{
-      width:calc(9.090909% - (var(--colmargin) *2));
-    }
-    .col-d12{
-      width:calc(8.3333% - (var(--colmargin) *2));
-    }
+
+    @media only screen and (min-width: calc(768px)) {
+  .row-d {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col-d1 {
+    flex-basis: calc(8.333% - (var(--colmargin) * 2));
+    max-width: calc(8.333% - (var(--colmargin) * 2));
+  }
+
+  .col-d2 {
+    flex-basis: calc(16.666% - (var(--colmargin) * 2));
+    max-width: calc(16.666% - (var(--colmargin) * 2));
+  }
+
+  .col-d3 {
+    flex-basis: calc(25% - (var(--colmargin) * 2));
+    max-width: calc(25% - (var(--colmargin) * 2));
+  }
+
+  .col-d4 {
+    flex-basis: calc(33.333% - (var(--colmargin) * 2));
+    max-width: calc(33.333% - (var(--colmargin) * 2));
+  }
+
+  .col-d5 {
+    flex-basis: calc(41.666% - (var(--colmargin) * 2));
+    max-width: calc(41.666% - (var(--colmargin) * 2));
+  }
+
+  .col-d6 {
+    flex-basis: calc(50% - (var(--colmargin) * 2));
+    max-width: calc(50% - (var(--colmargin) * 2));
+  }
+
+  .col-d7 {
+    flex-basis: calc(58.333% - (var(--colmargin) * 2));
+    max-width: calc(58.333% - (var(--colmargin) * 2));
+  }
+
+  .col-d8 {
+    flex-basis: calc(66.666% - (var(--colmargin) * 2));
+    max-width: calc(66.666% - (var(--colmargin) * 2));
+  }
+
+  .col-d9 {
+    flex-basis: calc(75% - (var(--colmargin) * 2));
+    max-width: calc(75% - (var(--colmargin) * 2));
+  }
+
+  .col-d10 {
+    flex-basis: calc(83.333% - (var(--colmargin) * 2));
+    max-width: calc(83.333% - (var(--colmargin) * 2));
+  }
+
+  .col-d11 {
+    flex-basis: calc(91.666% - (var(--colmargin) * 2));
+    max-width: calc(91.666% - (var(--colmargin) * 2));
+  }
+
+  .col-d12 {
+    flex-basis: calc(100% - (var(--colmargin) * 2));
+    max-width: calc(100% - (var(--colmargin) * 2));
+  }
 }
-   #file-content,#json-content{
-     width: 100%;
-     height: 80vh;
-   }
-   #json-content{
-     overflow: auto;
-     max-width: 30vw;
-   }
+    #file-content,
+    #json-content {
+        width: 100%;
+        height: 80vh;
+    }
 
-  </style>
-  <body>
+    #json-content {
+        overflow: auto;
+        max-width: 30vw;
+    }
+</style>
+
+<body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-   
 
+<div class="row-a">
+    <div class="col-a2">Contents of the file:</div>
+    <div class="col-a4">Object</div>
+    <div class="col-a6">Preview</div>
+</div>
+<div class="row-a">
+    <div class="col-a2"><input type="file" id="file-input-ovw" accept=".ovw" />
+        <label>Select ovw file</label></div>
+    <div class="col-a4"> <input type="file" id="file-input-json" accept=".json" />
+        <label>Select JSON file</label></div>
+    <div class="col-a6"><button onclick="convert()">Convert</button></div>
+</div>
+<div class="row-a">
+    <div class="col-a2">  <textarea id="file-content"></textarea></div>
+    <div class="col-a4"><pre id="json-content"></pre></div>
+    <div class="col-a6"> <div id="preview-content"></div></div>
+</div>
  
- 
-    <table>
-      <thead>
-        <th><h3>Contents of the file:</h3></th>
-        <th><h3>Object</h3></th>
-        <th><h3>Preview</h3></th>
-      </thead>
-      <tbody>
-        <tr>
-          <td> 
-            <input type="file" id="file-input-ovw" accept=".ovw"/>
-            <label>Select ovw file</label>
-          </td>
-          <td>
-            <input type="file" id="file-input-json"  accept=".json" />
-            <label>Select JSON file</label>
-          </td>
-          <td>
-            <button onclick="convert()">Convert</button>
-          </td>
-        </tr>
-<tr>
- 
-  <td style="width:20vw;">
-    <textarea id="file-content" ></textarea>
-  </td>
-  <td style="width:30vw;">
-    <pre id="json-content" ></pre>
-  </td>
-  <td  style="width:50vw;">
-    <div id="preview-content"></div>
-  </td>
-</tr>
-      </tbody>
-    </table>
 
 
     <div id="root"></div>
@@ -217,166 +358,189 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
-  <script>
+</body>
+<script>
     function readOvwFile(e) {
-  var file = e.target.files[0];
-  if (!file) {
-    return;
-  }
-  var reader = new FileReader();
-  reader.onload = function(e) {
-     ovw = e.target.result;
-    displayContents(ovw);
-  };
-  reader.readAsText(file);
-}
-var ob;
-var ovw = "";
-function readJsonFile(e) {
-  var file = e.target.files[0];
-  if (!file) {
-    return;
-  }
-  var reader = new FileReader();
-  reader.onload = function(e) {
-    var contents = e.target.result;
-   ob = JSON.parse(contents);
-   document.getElementById('json-content').innerText = JSON.stringify(ob, null, 4);
-  };
-  reader.readAsText(file);
-}
-function displayContents(contents) {
-
-  var element = document.getElementById('file-content');
-  element.textContent = contents;
-}
-
-document.getElementById('file-input-ovw')
-  .addEventListener('change', readOvwFile, false);
-  document.getElementById('file-input-json')
-  .addEventListener('change', readJsonFile, false);
-function convertovw(text,o)
-{
-  htmls = {};
-  var finalHTML  = "";
-  finalHTML = getHTML(text);
- 
-    var keys = Object.keys(o);
-    for (i = 0; i < keys.length; i++) {
-      console.info(keys[i]);
-      console.info();
-      if(Array.isArray(o[keys[i]]))
-      {
-        if(htmls.hasOwnProperty(keys[i]))
-        {
-
-          let arrayHtml = htmls[keys[i]];
-          for (let arI = 0; arI < o[keys[i]].length; arI++) {
-            arrayHtml+= convertovw(htmls[keys[i]],o[keys[i]][arI]);
-          }
-        finalHTML = finalHTML.replace("@" + keys[i],arrayHtml);
+        var file = e.target.files[0];
+        if (!file) {
+            return;
         }
-
- 
-      }else{finalHTML = finalHTML.replace("@" + keys[i],o[keys[i]]);}
-      
-
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            ovw = e.target.result;
+            displayContents(ovw);
+        };
+        reader.readAsText(file);
     }
-return finalHTML;
-}
-var htmls = {};
-function getHTML(text)
-{ 
-  let hasColumns = false;
-  let finalHTML  = '<div class="ovw-container">';
-  const dC = '/';
-  const mC = '\\';
-  let lines = text.replace('\r','').split('\n');
-  for(let i = 0;i < lines.length;i++){
- let   dcCount = 0;
- let   mcCount =0;
-    let lineChars = lines[i].split('');
-    for(let c = 0;c < lineChars.length;c++){
-      if(lineChars[c] == mC)
-      mcCount++;
-      else  if(lineChars[c] == dC)
-      dcCount++;
-      else
-      break;
+    var ob;
+    var ovw = "";
+    function readJsonFile(e) {
+        var file = e.target.files[0];
+        if (!file) {
+            return;
+        }
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            var contents = e.target.result;
+            ob = JSON.parse(contents);
+            document.getElementById('json-content').innerText = JSON.stringify(ob, null, 4);
+        };
+        reader.readAsText(file);
     }
-    let beforeContent = "";
-    let afterContent = "";
-    if(mcCount > 0 || dcCount > 0 )
-    {
-     if(hasColumns)
-     beforeContent ='</div><div class="'
-     else
-      beforeContent ='<div class="'
+    function displayContents(contents) {
 
-      hasColumns = true;
-      if(mcCount > 0)
-      {
-        beforeContent += "col-m" + mcCount.toString()
-      }else {
-        beforeContent += "col-m" + dcCount.toString()
+        var element = document.getElementById('file-content');
+        element.textContent = contents;
+    }
 
-      }
-      if(dcCount > 0)
-      {
-        beforeContent += " col-d" + dcCount.toString()
-      }
-      beforeContent += '">';
-  
-    }
-    if(hasColumns && i == lines.length - 1)
-    {
-      afterContent = '</div>'
-    }
-    let currentLine ="";
-    currentLine= lines[i].substring(dcCount+mcCount);
-    if(currentLine.indexOf('#####')> -1 )
-    currentLine = currentLine.replace('######','<h5>') + '</h5>'
-    else if(currentLine.indexOf('####')> -1)
-    currentLine = currentLine.replace('####','<h4>') + '</h4>'
-    else if(currentLine.indexOf('###')> -1)
-    currentLine = currentLine.replace('###','<h3>') + '</h3>'
-    else if(currentLine.indexOf('##')> -1)
-    currentLine = currentLine.replace('##','<h2>') + '</h3>'
-    else if(currentLine.indexOf('#')> -1)
-    currentLine = currentLine.replace('#','<h1>') + '</h1>'
-    else if(i < lines.length - 1 && lines[i + 1].trim() == "")
-    currentLine = '<p>' + currentLine + '</p>'
-    else if(currentLine.trim() == "-")
-    {if(hasColumns)
-      {
-        currentLine = '</div><div class="bl"></div><br>'
-        hasColumns = false;
-      }else{
-        currentLine = '<div class="bl"></div><br>'
-      }
-    }
-    else if(currentLine.trim() == "--")
-    {
-      if(hasColumns)
-      {
-        currentLine = '</div><div class="bl"><hr></div>'
-        hasColumns = false;
-      }else{
-        currentLine = '<div class="bl"><hr></div>'
-      }
-     
-    }
-    else
-    currentLine = currentLine + '<br>'
+    document.getElementById('file-input-ovw')
+        .addEventListener('change', readOvwFile, false);
+    document.getElementById('file-input-json')
+        .addEventListener('change', readJsonFile, false);
+    function convertovw(text, o) {
+        htmls = {};
+        var finalHTML = "";
+        finalHTML = getHTML(text);
 
-    finalHTML  = finalHTML + beforeContent + currentLine + afterContent;
+        var keys = Object.keys(o);
+        for (i = 0; i < keys.length; i++) {
+            console.info(keys[i]);
+            console.info();
+            if (Array.isArray(o[keys[i]])) {
+                if (htmls.hasOwnProperty(keys[i])) {
 
-  }
-  return (finalHTML  + "</div>").replace('<br></div>',"</div>");
-}
-function convert(){
-  document.getElementById("preview-content").innerHTML = convertovw(document.getElementById("file-content").value,ob);
-}
- </script>
+                    let arrayHtml = htmls[keys[i]];
+                    for (let arI = 0; arI < o[keys[i]].length; arI++) {
+                        arrayHtml += convertovw(htmls[keys[i]], o[keys[i]][arI]);
+                    }
+                    finalHTML = finalHTML.replace("@" + keys[i], arrayHtml);
+                }
+
+
+            } else { finalHTML = finalHTML.replace("@" + keys[i], o[keys[i]]); }
+
+
+        }
+        return finalHTML;
+    }
+    var htmls = {};
+    function getHTML(text) {
+        let hasColumns = false;
+        let finalHTML = '<div class="ovw-container">';
+
+        let lines = text.replace('\r', '').split('\n');
+        let rowANumber = 0
+        let rowDNumber = 0
+        let rowMNumber = 0
+        for (let i = 0; i < lines.length; i++) {
+
+            /*desktop Split Value*/
+            let dsValue = 0;
+            /*mobile Split Value*/
+            let msValue = 0;
+            /*all Split Value*/
+            let asValue = 0;
+
+            const responsivePatternMD = /\[m(\d+),d(\d+)\]/;
+            const responsivePatternDM = /\[d(\d+),m(\d+)\]/;
+            const noResponsivePattern = /\[a(\d+)\]/;
+            let matches = lines[i].match(responsivePatternMD);
+            if (matches) {
+                msValue = matches[1];
+                dsValue = matches[2];
+            } else {
+                matches = lines[i].match(responsivePatternDM);
+                if (matches) {
+                    dsValue = matches[1];
+                    msValue = matches[2];
+                } else {
+                    matches = lines[i].match(noResponsivePattern);
+                    if (matches) {                    
+                        asValue = matches[1];
+                    }
+                }
+            }
+
+            let lineChars = lines[i].trim().split('');
+
+            let beforeContent = "";
+            let afterContent = "";
+            let currentLineContent = lines[i].trim();
+            console.log(`msValue:${msValue}, dsValue:${dsValue} , asValue:${asValue}`);
+            if (msValue > 0 || dsValue > 0 || asValue > 0) {
+                if (hasColumns)
+                    beforeContent = '</div><div class="'
+                else
+                    beforeContent = '<div class="'
+
+                hasColumns = true;
+
+
+                if (msValue > 0) {
+                    beforeContent += " col-m" + msValue.toString()
+                } 
+                if (dsValue > 0) {
+                    beforeContent += " col-d" + dsValue.toString()
+                }
+                if (asValue > 0) {
+                    beforeContent += " col-a" + asValue.toString()
+
+                }                
+                beforeContent += '">';
+                matches = currentLineContent.match(/\](.*?)$/);
+                if(matches)
+                {  
+                    console.log('before:' + currentLineContent);
+                    currentLineContent = matches[1];
+                    console.log('after:' + currentLineContent);
+                }
+               
+            }
+            if (hasColumns && i == lines.length - 1) {
+                afterContent = '</div>'
+            }
+          
+           
+            if (currentLineContent.indexOf('#####') > -1)
+                currentLineContent = currentLineContent.replace('######', '<h5>') + '</h5>'
+            else if (currentLineContent.indexOf('####') > -1)
+                currentLineContent = currentLineContent.replace('####', '<h4>') + '</h4>'
+            else if (currentLineContent.indexOf('###') > -1)
+                currentLineContent = currentLineContent.replace('###', '<h3>') + '</h3>'
+            else if (currentLineContent.indexOf('##') > -1)
+                currentLineContent = currentLineContent.replace('##', '<h2>') + '</h3>'
+            else if (currentLineContent.indexOf('#') > -1)
+                currentLineContent = currentLineContent.replace('#', '<h1>') + '</h1>'
+            else if (i < lines.length - 1 && lines[i + 1].trim() == "")
+                currentLineContent = '<p>' + currentLineContent + '</p>'
+            else if (currentLineContent.trim() == "-") {
+                if (hasColumns) {
+                    currentLineContent = '</div><div class="bl"></div><br>'
+                    hasColumns = false;
+                } else {
+                    currentLineContent = '<div class="bl"></div><br>'
+                }
+            }
+            else if (currentLineContent.trim() == "--") {
+                if (hasColumns) {
+                    currentLineContent = '</div><div class="bl"><hr></div>'
+                    hasColumns = false;
+                } else {
+                    currentLineContent = '<div class="bl"><hr></div>'
+                }
+
+            }
+            else
+                currentLineContent = currentLineContent + '<br>'
+
+            finalHTML = finalHTML + beforeContent + currentLineContent + afterContent;
+
+        }
+        return (finalHTML + "</div>").replace('<br></div>', "</div>");
+    }
+    function convert() {
+        document.getElementById("preview-content").innerHTML = convertovw(document.getElementById("file-content").value, ob);
+    }
+</script>
+
 </html>
